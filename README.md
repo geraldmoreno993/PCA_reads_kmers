@@ -22,6 +22,23 @@ simlord --no-sam -rr SA.fasta -n 100 -mr 1500 SA
 simlord --no-sam -rr PA.fasta -n 100 -mr 1500 PA
 ```
 
+Vectorizando secuencias
+source: https://medium.com/computational-biology/vectorization-of-dna-sequences-2acac972b2ee
+
+
+I compile the above program using the following command;
+
+```
+#!/bin/bash}
+sudo apt install g++
+g++ vectorize.cpp -o vectorize -fopenmp --std=c++17
+```
+
+I run the following commands to get the vectors for each species’ fastq reads.
+```
+./vectorize ./SA.fastq 3 8 100 > ./SA.txt
+./vectorize ./PA.fastq 3 8 100 > ./PA.txt
+```
 
 Computing PCA and Plotting on 2D Plane (python de preferencia en Jupyter notebook)
 
