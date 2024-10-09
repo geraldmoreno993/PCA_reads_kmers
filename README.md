@@ -5,7 +5,7 @@ Source: https://medium.com/computational-biology/pca-for-bioinformaticians-4cf2c
 
 Principal Component Analysis (PCA) is one of the most popular dimension reduction techniques in Machine Learning and Statistics. PCA is very useful in order to visualize data in human-readable formats, such as 2D plots for better understanding of high-dimensional data. We can obtain the same set of advantages in the domain of Bioinformatics by applying PCA on our genomic/proteomic datasets. In this article, I will explain how one might use PCA to differentiate between two species using the species’ oligonucleotide frequency vectors.
 
-Simulating Reads
+# Simulating Reads
 
 In order to demonstrate the use of PCA, first, we shall download two species. In this article I will be using the two species;
 
@@ -22,7 +22,7 @@ simlord --no-sam -rr SA.fasta -n 100 -mr 1500 SA
 simlord --no-sam -rr PA.fasta -n 100 -mr 1500 PA
 ```
 
-Vectorizando secuencias
+# Vectorize sequences
 source: https://medium.com/computational-biology/vectorization-of-dna-sequences-2acac972b2ee
 
 
@@ -51,7 +51,7 @@ Vamos a descomponer cada elemento:
 ```> ./SA.txt``` y ```> ./PA.txt```: Estos redirigen la salida del programa a archivos de texto
 
 
-Computing PCA and Plotting on 2D Plane (python de preferencia en Jupyter notebook)
+# Computing PCA and Plotting on 2D Plane (python de preferencia en Jupyter notebook)
 
 Now that we have vectorized the sequences from long reads, we can use Python’s Sci-Kit learn library to obtain the PCA decomposition. I will use the Seaborn library for Python to visualize them on the 2D plane.
 
@@ -78,7 +78,7 @@ plt.savefig("PCA.png")
 The above code will plot us the following diagram.
 ```
 
-Versión corregida
+# PCA Versión corregida
 
 ```
 # Load data
