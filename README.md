@@ -15,7 +15,7 @@ Staphylococcus aureus (Nuccore ID NC_007795.1)
 Pseudomonas aeruginosa (Nuccore ID NC_002516.2)
 
 Instalar simlord y dependencias dentro de un ambiente de conda segun esta pagina: https://bitbucket.org/genomeinformatics/simlord/src/master/
-y ejecutar en la temrinal las siguientes lineas
+y ejecutar en la terminal las siguientes lineas
 ```
 #!/bin/bash
 simlord --no-sam -rr SA.fasta -n 100 -mr 1500 SA
@@ -29,13 +29,15 @@ source: https://medium.com/computational-biology/vectorization-of-dna-sequences-
 I compile the above program using the following command;
 
 ```
-#!/bin/bash}
+#!/bin/bash
 sudo apt install g++
 g++ vectorize.cpp -o vectorize -fopenmp --std=c++17
 ```
 
 I run the following commands to get the vectors for each species’ fastq reads.
+
 ```
+#!/bin/bash
 ./vectorize ./SA.fastq 3 8 100 > ./SA.txt
 ./vectorize ./PA.fastq 3 8 100 > ./PA.txt
 ```
