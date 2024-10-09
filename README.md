@@ -41,7 +41,14 @@ I run the following commands to get the vectors for each species’ fastq reads.
 ./vectorize ./SA.fastq 3 8 100 > ./SA.txt
 ./vectorize ./PA.fastq 3 8 100 > ./PA.txt
 ```
+Vamos a descomponer cada elemento:
 
+```./vectorize```: Esto ejecuta el programa compilado (el ejecutable vectorize).
+./SA.fastq y ./PA.fastq: Estos son los archivos FASTQ que contienen las lecturas genómicas para dos especies diferentes, posiblemente Staphylococcus aureus (SA) y Pseudomonas aeruginosa (PA). El programa parece procesar estos archivos para generar vectores basados en las secuencias de ADN contenidas en ellos.
+3: Es un parámetro pasado al programa que probablemente corresponde a la longitud de los k-mers que se van a generar. En este caso, parece que el programa generará k-mers de longitud 3 (trinucleótidos).
+8: Otro parámetro pasado al programa, que podría estar relacionado con el número de procesos paralelos (hilos) que se deben usar con OpenMP, lo que indicaría que el programa podría estar aprovechando 8 núcleos del procesador para realizar la tarea de manera más eficiente.
+100: Podría ser un parámetro que controla cuántas secuencias o lecturas del archivo FASTQ se deben procesar, o quizás el tamaño de la ventana en la que se aplican los k-mers.
+> ./SA.txt y > ./PA.txt: Estos redirigen la salida del programa a archivos de texto
 Computing PCA and Plotting on 2D Plane (python de preferencia en Jupyter notebook)
 
 Now that we have vectorized the sequences from long reads, we can use Python’s Sci-Kit learn library to obtain the PCA decomposition. I will use the Seaborn library for Python to visualize them on the 2D plane.
