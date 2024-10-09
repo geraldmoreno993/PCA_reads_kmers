@@ -49,6 +49,8 @@ Vamos a descomponer cada elemento:
 ```8```: Otro parámetro pasado al programa, que podría estar relacionado con el número de procesos paralelos (hilos) que se deben usar con OpenMP, lo que indicaría que el programa podría estar aprovechando 8 núcleos del procesador para realizar la tarea de manera más eficiente.
 ```100```: Podría ser un parámetro que controla cuántas secuencias o lecturas del archivo FASTQ se deben procesar, o quizás el tamaño de la ventana en la que se aplican los k-mers.
 ```> ./SA.txt``` y ```> ./PA.txt```: Estos redirigen la salida del programa a archivos de texto
+
+
 Computing PCA and Plotting on 2D Plane (python de preferencia en Jupyter notebook)
 
 Now that we have vectorized the sequences from long reads, we can use Python’s Sci-Kit learn library to obtain the PCA decomposition. I will use the Seaborn library for Python to visualize them on the 2D plane.
